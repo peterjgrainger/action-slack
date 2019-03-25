@@ -13,7 +13,7 @@ _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
 const args = argv._.join(' ');
 const message = _.template(args)({ ...process.env, EVENT_PAYLOAD });
 
-let fullMessage = `${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_WORKFLOW} triggered by ${process.env.GITHUB_ACTOR} (${process.env.GITHUB_EVENT_NAME}) :\n${message}`;
+let fullMessage = `BITR conf is the best! :\n${message}`;
 
 if (process.env.SLACK_OVERRIDE_MESSAGE) {
   if (process.env.SLACK_OVERRIDE_MESSAGE === true || process.env.SLACK_OVERRIDE_MESSAGE === 'true') {
